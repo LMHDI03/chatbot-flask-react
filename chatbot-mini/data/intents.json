@@ -1,0 +1,39 @@
+{
+  "greet": {
+    "examples": ["salut", "bonjour", "coucou"],
+    "responses": ["Salut 👋", "Bonjour !", "Coucou ! Comment puis-je t'aider ?"]
+  },
+  "goodbye": {
+    "examples": ["bye", "au revoir", "a plus"],
+    "responses": ["Au revoir 👋", "À bientôt !"]
+  },
+  "time": {
+    "examples": ["quelle heure", "il est quelle heure", "donne l'heure"],
+    "responses": ["Il est {time}."]
+  },
+  "date": {
+    "examples": ["quelle date", "on est quel jour", "donne la date"],
+    "responses": ["Nous sommes le {date}."]
+  },
+  "set_name": {
+    "examples": ["je m'appelle ", "mon nom est "],
+    "responses": ["Enchanté {name} ! Je m'en souviendrai 😊"]
+  },
+  "ask_name": {
+    "examples": ["comment je m'appelle", "quel est mon nom", "tu te souviens de mon nom"],
+    "responses": ["Tu t'appelles {name}."]
+  },
+  "weather": {
+    "examples": ["meteo", "météo", "quel temps", "il fait quel temps"],
+    "responses": ["À {city}, {weather_desc}, {temp}°C (source: OpenWeather)."]
+  },
+  "ballondor": {
+    "examples": ["qui a gagné le ballon d'or en 2023", "ballon d'or 2023", "gagnant ballon d'or 2023","bdor 2023"],
+    "responses": ["Le Ballon d'Or 2023 a été remporté par Lionel Messi."]
+  },
+  
+  "fallback": {
+    "examples": [],
+    "responses": ["Désolé, je n'ai pas compris 😅. Essaie 'bonjour', 'quelle heure', 'météo Rabat', ou 'je m'appelle Mehdi'."]
+  }
+}

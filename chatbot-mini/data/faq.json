@@ -1,0 +1,37 @@
+{
+  "entries": [
+    {
+      "patterns": ["ballon dor 2023", "gagnant ballon dor 2023", "ballon d'or 2023"],
+      "answer": "Lionel Messi a remporté le Ballon d'Or 2023."
+    },
+    {
+      "patterns": ["createur python", "qui a cree python", "qui a créé python"],
+      "answer": "Python a été créé par Guido van Rossum."
+    },
+    {
+      "patterns": ["capital france", "capitale de la france", "quelle est la capitale de la france"],
+      "answer": "La capitale de la France est Paris."
+    },
+    
+    {
+      "patterns": ["capital maroc", "capitale du maroc", "quelle est la capitale du maroc"],
+      "answer": "La capitale du Maroc est Rabat."
+    },
+    {
+      "patterns": ["roi maroc", "qui est le roi du maroc", "roi actuel maroc"],
+      "answer": "Le roi du Maroc est Mohammed VI."
+    },
+    {
+      "patterns": ["plus grande ville maroc", "ville la plus peuplée du maroc", "plus grande ville au maroc"],
+      "answer": "La plus grande ville du Maroc par la population est Casablanca."
+    },
+    {
+      "patterns": ["langue officielle maroc", "quelle est la langue officielle du maroc", "langues maroc"],
+      "answer": "Les langues officielles du Maroc sont l'arabe et l'amazighe."
+    },
+    {
+      "patterns": ["monnaie maroc", "quelle est la monnaie du maroc", "devise maroc"],
+      "answer": "La monnaie du Maroc est le dirham marocain (MAD)."
+    }
+  ]
+}
