@@ -10,6 +10,7 @@ body.dark {
   background: linear-gradient(135deg, #0b0c10, #13151a);
   color: #e5e7eb;
 }
+<<<<<<< HEAD
 body.dark .chat-header {
   font-size: 1.8rem;
   font-weight: bold;
@@ -18,6 +19,9 @@ body.dark .chat-header {
   color: #6d3434;
   text-shadow: 0 0 8px rgba(7, 82, 245, 0.5);
 }
+=======
+
+>>>>>>> origin/main
 body.dark .chat-card {
   background: #0f172a;
   border: 1px solid #1f2937;
@@ -175,6 +179,7 @@ body.dark .suggestions button:hover {
 .suggestions button:hover {
   background: #e2e8f0;
 }
+<<<<<<< HEAD
 /* --- Toolbar et boutons cohérents --- */
 .toolbar {
   display: flex;
@@ -246,3 +251,5 @@ body.dark .btn-ghost:hover { background: #1f2937; }
 
 /* Zone d’envoi : bouton large */
 .chat-input .btn-send { min-width: 110px; }
+=======
+>>>>>>> origin/main
