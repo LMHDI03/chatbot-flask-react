@@ -1,0 +1,25 @@
+# Node
+node_modules/
+dist/
+
+# Python
+chatbot-mini/venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.pytest_cache/
+
+# Build copié dans Flask
+chatbot-mini/frontend/*
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Logs & env
+*.log
+.env

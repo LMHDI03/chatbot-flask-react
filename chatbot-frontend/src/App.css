@@ -10,7 +10,18 @@ body.dark {
   background: linear-gradient(135deg, #0b0c10, #13151a);
   color: #e5e7eb;
 }
+<<<<<<< HEAD
+body.dark .chat-header {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-align: center;
+  color: #6d3434;
+  text-shadow: 0 0 8px rgba(7, 82, 245, 0.5);
+}
+=======
 
+>>>>>>> origin/main
 body.dark .chat-card {
   background: #0f172a;
   border: 1px solid #1f2937;
@@ -168,3 +179,77 @@ body.dark .suggestions button:hover {
 .suggestions button:hover {
   background: #e2e8f0;
 }
+<<<<<<< HEAD
+/* --- Toolbar et boutons cohérents --- */
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.toolbar input[type="text"] {
+  flex: 1;
+  min-width: 240px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #cbd5e1;
+  background: #0f172a;   /* lisible en clair */
+  color: #ffffff;
+  outline: none;
+}
+
+/* En dark, on remet les couleurs prévues */
+body.dark .toolbar input[type="text"] {
+  background: #0b1220;
+  color: #e5e7eb;
+  border-color: #334155;
+}
+
+/* Bouton principal (Sombre/Clair, Envoyer) */
+.btn {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 14px;
+  cursor: pointer;
+}
+.btn:hover { background: #1e40af; }
+
+/* Bouton neutre (Effacer, Exporter) */
+.btn-ghost {
+  background: transparent;
+  color: inherit;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 10px 14px;
+  cursor: pointer;
+}
+.btn-ghost:hover { background: #f1f5f9; }
+body.dark .btn-ghost:hover { background: #1f2937; }
+
+/* Suggestions (chips) – actives par défaut */
+.suggestions button {
+  background: #f1f5f9;
+  color: #0f172a;     /* évite l’effet "désactivé" en clair */
+  font-weight: 600;
+  border: 1px solid #e2e8f0;
+  padding: 8px 12px;
+  border-radius: 999px;
+  cursor: pointer;
+  opacity: 1;         /* clé : pas d’opacité globale */
+  transition: transform .03s ease;
+}
+.suggestions button:hover { background: #e2e8f0; transform: translateY(-1px); }
+
+/* État vraiment désactivé (si tu l’utilises) */
+.suggestions button:disabled {
+  opacity: .45;
+  cursor: not-allowed;
+}
+
+/* Zone d’envoi : bouton large */
+.chat-input .btn-send { min-width: 110px; }
+=======
+>>>>>>> origin/main

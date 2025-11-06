@@ -149,22 +149,40 @@ export default function ChatbotUI() {
     <div className="app-container">
       <div className="chat-card">
         {/* Header */}
+<<<<<<< HEAD
+        <div className="chat-header">🤖 Mini Chatbot</div>
+
+        {/* Toolbar */}
+        <div className="toolbar">
+          <input
+            type="text"
+=======
         <div className="chat-header">🤖 Mehdi Chatbot</div>
 
         {/* Toolbar */}
         <div style={{ display: "flex", gap: 8, marginBottom: 12, flexWrap: "wrap" }}>
           <input
             style={{ flex: 1, minWidth: 240 }}
+>>>>>>> origin/main
             placeholder="URL API (ex: / ou http://127.0.0.1:8000)"
             value={apiBase}
             onChange={(e) => setApiBase(e.target.value)}
           />
+<<<<<<< HEAD
+          <button className="btn" onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
+            {theme === "dark" ? "☀️ Clair" : "🌙 Sombre"}
+          </button>
+          <button className="btn-ghost" onClick={clearChat}>Effacer</button>
+          <button className="btn-ghost" onClick={exportTxt} title="Exporter en .txt">Exporter .txt</button>
+          <button className="btn-ghost" onClick={exportJson} title="Exporter en .json">Exporter .json</button>
+=======
           <button onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
             {theme === "dark" ? "☀️ Clair" : "🌙 Sombre"}
           </button>
           <button onClick={clearChat}>Effacer</button>
           <button onClick={exportTxt} title="Exporter en .txt">Exporter .txt</button>
           <button onClick={exportJson} title="Exporter en .json">Exporter .json</button>
+>>>>>>> origin/main
         </div>
 
         {/* Messages */}
@@ -232,7 +250,11 @@ export default function ChatbotUI() {
               color: "inherit",
             }}
           />
+<<<<<<< HEAD
+          <button className="btn btn-send" onClick={() => send(input)} disabled={!canSend}>
+=======
           <button onClick={() => send(input)} disabled={!canSend}>
+>>>>>>> origin/main
             Envoyer
           </button>
         </div>
