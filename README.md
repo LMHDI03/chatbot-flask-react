@@ -1,73 +1,130 @@
-# React + TypeScript + Vite
+# 🤖 Mini Chatbot – Interface Web
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Une interface web moderne et légère pour discuter avec une API de chatbot locale ou distante.  
+Ce projet est développé avec **React + TypeScript**, et communique avec une API (par exemple : Flask) via le point d’accès `/chat`.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🌟 Fonctionnalités
 
-## React Compiler
+- 💬 Interface simple, responsive et fluide  
+- 🌓 Mode **clair / sombre** persistant  
+- 💾 Sauvegarde automatique de la conversation (localStorage)  
+- 📤 Export des discussions en `.txt` ou `.json`  
+- 🧠 Suggestions de requêtes intelligentes  
+- ⚙️ URL d’API configurable directement dans l’interface  
+- 🧹 Effacement rapide de la conversation  
+- 📋 Copie rapide d’un message par clic  
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🧰 Technologies utilisées
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+| Catégorie | Outils |
+|------------|--------|
+| **Frontend** | React + TypeScript |
+| **Styling** | CSS pur (`app.css`) |
+| **Build Tool** | Vite |
+| **Backend attendu** | API REST (`/chat`) – ex : Flask |
+| **Langages** | JavaScript, TypeScript, Python |
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 🚀 Installation et lancement
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### 1️⃣ Cloner le projet
+```bash
+git clone https://github.com/<votre-nom-utilisateur>/<nom-du-repo>.git
+cd <nom-du-repo>
+2️⃣ Installer les dépendances frontend
+bash
+Copier le code
+npm install
+3️⃣ (Optionnel) Créer et activer un environnement virtuel Python
+Si tu utilises un backend Flask :
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+bash
+Copier le code
+python -m venv venv
+venv\Scripts\activate   # Windows
+# ou
+source venv/bin/activate   # Linux / macOS
+4️⃣ Installer les dépendances backend
+bash
+Copier le code
+pip install -r requirements.txt
+5️⃣ Lancer le serveur React (frontend)
+bash
+Copier le code
+npm run dev
+Le projet sera accessible sur :
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+arduino
+Copier le code
+http://localhost:5173/
+6️⃣ Lancer le serveur Flask (backend)
+bash
+Copier le code
+python run_api.py
+L’API doit répondre sur :
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+arduino
+Copier le code
+http://127.0.0.1:8000/chat
+⚙️ Structure du projet
+bash
+Copier le code
+📦 chatbot-project
+ ┣ 📂 chatbot-frontend
+ ┃ ┣ 📂 src
+ ┃ ┃ ┣ 📜 ChatbotUI.tsx      → Composant principal React
+ ┃ ┃ ┣ 📜 app.css            → Styles globaux + dark mode
+ ┃ ┃ ┗ 📜 main.tsx           → Point d’entrée React
+ ┃ ┣ 📜 index.html
+ ┃ ┣ 📜 package.json
+ ┣ 📂 chatbot-mini
+ ┃ ┣ 📜 run_api.py           → Serveur Flask + routes API
+ ┃ ┣ 📜 bot.py               → Logique du chatbot
+ ┣ 📜 deploy_all.py          → Script d’automatisation du build
+ ┣ 📜 README.md              → Documentation du projet
+🧩 Déploiement
+▶️ Script deploy_all.py
+Ce script automatise le processus :
+
+Supprime les fichiers temporaires et anciens builds
+
+Exécute npm run build
+
+Copie le contenu du dossier dist/ dans le backend Flask (chatbot-mini/web)
+
+Exécution :
+bash
+Copier le code
+python deploy_all.py
+🪄 Exécution manuelle :
+bash
+Copier le code
+npm run build
+Puis copier le contenu de dist/ dans le dossier où Flask sert les fichiers statiques (chatbot-mini/web).
+
+💡 Améliorations futures
+🔌 Indicateur visuel de connexion API (en ligne / hors ligne)
+
+🗣️ Ajout de la synthèse vocale (text-to-speech)
+
+⌨️ Support de commandes vocales
+
+🧠 Ajout d’un mode GPT local ou API OpenAI
+
+🌐 Internationalisation (i18n)
+
+💅 Effets visuels modernes (animations, transitions CSS)
+
+📱 Refonte responsive mobile améliorée
+
+👨‍💻 Auteur
+El Mehdi REGRAGUI
+🎓 Master 2 – Systèmes Intelligents & Mobiles
+📍 Taza, Maroc
+📧 Contact : [mehdiregragui00@gmail.com]
+🔗 LinkedIn https://www.linkedin.com/in/mehdi-regragui200
